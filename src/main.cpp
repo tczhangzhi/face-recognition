@@ -106,7 +106,7 @@ int main(int argc, char* argv[])
         featureOutput.copyTo(faceInfo[i].FeatureVector);
         float similarity = CosineSimilarity(featureOutput, captureFeature);
         cout << similarity << endl;
-        if (similarity > 0.8) {
+        if (similarity > 0.2) {
             int x = (int) faceInfo[i].bbox.xmin;
             int y = (int) faceInfo[i].bbox.ymin;
             int w = (int) (faceInfo[i].bbox.xmax - faceInfo[i].bbox.xmin + 1);
